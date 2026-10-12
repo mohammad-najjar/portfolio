@@ -3,7 +3,7 @@
   const DICT = {
   "en": {
     "meta.title": "Mohammad Najjar | Software Developer",
-    "meta.description": "Portfolio of Mohammad Najjar, a software developer from Yatta, Palestine. Browse six GitHub projects and get in touch.",
+    "meta.description": "Portfolio of Mohammad Najjar, a software developer from Yatta, Palestine. Browse six selected projects and get in touch.",
     "a11y.skip": "Skip to content",
     "a11y.newtab": "(opens in a new tab)",
     "nav.label": "Main navigation",
@@ -19,13 +19,13 @@
     "brand.name": "Mohammad Najjar",
     "hero.name": "Mohammad Najjar",
     "hero.role": "Software Developer",
-    "hero.intro": "I build responsive web projects and share them openly on GitHub.",
+    "hero.intro": "I build responsive web projects and publish them online.",
     "hero.location": "Based in Yatta, Palestine",
     "hero.cta.projects": "See my projects",
     "hero.cta.contact": "Get in touch",
     "about.title": "About me",
     "about.p1": "I'm Mohammad Najjar, a software developer from Yatta, Palestine. I build websites and web projects with HTML, CSS and JavaScript.",
-    "about.p2": "Every project on this page is public on GitHub, and four of them have live demos you can open right now.",
+    "about.p2": "Four of the projects on this page have live demos you can open right now.",
     "about.location": "Location",
     "about.email": "Email",
     "about.github": "GitHub",
@@ -39,7 +39,7 @@
     "skills.accessibility": "Accessibility",
     "skills.bilingual": "Bilingual interfaces (EN/AR)",
     "projects.title": "Featured projects",
-    "projects.intro": "Six repositories from my GitHub profile.",
+    "projects.intro": "Six selected projects.",
     "projects.code": "View code",
     "projects.demo": "Live demo",
     "projects.details": "Details",
@@ -63,7 +63,7 @@
     "modal.demo": "Live demo",
     "achievements.title": "Achievements",
     "achievements.intro": "Numbers taken directly from this portfolio.",
-    "achievements.repos": "Projects published on GitHub",
+    "achievements.repos": "Featured projects",
     "achievements.demos": "Projects with live demos",
     "achievements.langs": "Languages on this site",
     "contact.title": "Contact",
@@ -85,7 +85,7 @@
   },
   "ar": {
     "meta.title": "محمد نجار | مطوّر برمجيات",
-    "meta.description": "الموقع الشخصي لمحمد نجار، مطوّر برمجيات من يطا، فلسطين. تصفّح ستة مشاريع على GitHub وتواصل معي.",
+    "meta.description": "الموقع الشخصي لمحمد نجار، مطوّر برمجيات من يطا، فلسطين. تصفّح ستة مشاريع مختارة وتواصل معي.",
     "a11y.skip": "انتقل إلى المحتوى",
     "a11y.newtab": "(يفتح في تبويب جديد)",
     "nav.label": "التنقل الرئيسي",
@@ -101,13 +101,13 @@
     "brand.name": "محمد نجار",
     "hero.name": "محمد نجار",
     "hero.role": "مطوّر برمجيات",
-    "hero.intro": "أبني مشاريع ويب متجاوبة وأشاركها بشكل مفتوح على GitHub.",
+    "hero.intro": "أبني مشاريع ويب متجاوبة وأنشرها على الإنترنت.",
     "hero.location": "أقيم في يطا، فلسطين",
     "hero.cta.projects": "شاهد مشاريعي",
     "hero.cta.contact": "تواصل معي",
     "about.title": "نبذة عني",
     "about.p1": "أنا محمد نجار، مطوّر برمجيات من يطا، فلسطين. أبني مواقع ومشاريع ويب باستخدام HTML وCSS وJavaScript.",
-    "about.p2": "كل مشروع في هذه الصفحة متاح للعامة على GitHub، وأربعة منها لها عروض مباشرة يمكنك فتحها الآن.",
+    "about.p2": "أربعة من المشاريع في هذه الصفحة لها عروض مباشرة يمكنك فتحها الآن.",
     "about.location": "الموقع",
     "about.email": "البريد الإلكتروني",
     "about.github": "GitHub",
@@ -121,7 +121,7 @@
     "skills.accessibility": "إمكانية الوصول",
     "skills.bilingual": "واجهات ثنائية اللغة (EN/AR)",
     "projects.title": "مشاريع مميزة",
-    "projects.intro": "ستة مستودعات من حسابي على GitHub.",
+    "projects.intro": "ستة مشاريع مختارة.",
     "projects.code": "عرض الكود",
     "projects.demo": "عرض مباشر",
     "projects.details": "التفاصيل",
@@ -145,7 +145,7 @@
     "modal.demo": "عرض مباشر",
     "achievements.title": "الإنجازات",
     "achievements.intro": "أرقام مأخوذة مباشرة من هذا الموقع.",
-    "achievements.repos": "مشاريع منشورة على GitHub",
+    "achievements.repos": "مشاريع مميزة",
     "achievements.demos": "مشاريع لها عروض مباشرة",
     "achievements.langs": "لغات في هذا الموقع",
     "contact.title": "التواصل",
@@ -249,7 +249,8 @@
     $('#m-title').dataset.i18n = `projects.${id}.title`;
     $('#m-desc').dataset.i18n = `projects.${id}.description`;
     const repo = $('#m-repo'), demo = $('#m-demo');
-    repo.href = c.dataset.repo; repo.textContent = c.dataset.repo;
+    $('#m-repo-row').hidden = !c.dataset.repo;
+    if (c.dataset.repo) { repo.href = c.dataset.repo; repo.textContent = c.dataset.repo; }
     $('#m-demo-row').hidden = !c.dataset.demo;
     if (c.dataset.demo) { demo.href = c.dataset.demo; demo.textContent = c.dataset.demo; }
     apply(dlg);
