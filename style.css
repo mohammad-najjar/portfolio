@@ -119,3 +119,11 @@ nav a{display:block;padding:.75rem .5rem;border-radius:8px}
 }
 @media(max-width:420px){.brand{font-size:1rem}.lang button{padding:.3rem .55rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.card:hover{transform:none}}
+
+/* preview panels (abstract placeholders, not screenshots) */
+.thumb{display:grid;place-items:center;height:7.5rem;background:radial-gradient(circle at 70% 20%,color-mix(in srgb,var(--a) 28%,transparent),transparent 65%),#0F1814;border-bottom:1px solid var(--line)}
+.thumb b{font-size:2.6rem;font-weight:800;letter-spacing:.04em;color:var(--a);opacity:.9}
+nav a[aria-current]{color:var(--text);background:var(--card)}
+dialog dd{color:var(--text)}
+dialog p{margin-inline-end:0}
+@media(max-width:820px){nav a[aria-current]{background:transparent;color:var(--green)}}
