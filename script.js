@@ -18,6 +18,9 @@
     "lang.label": "Language",
     "brand.name": "Mohammad Najjar",
     "hero.name": "Mohammad Najjar",
+    "hero.first": "Mohammad",
+    "hero.last": "Najjar",
+    "contact.headline": "Have a question or a project in mind?",
     "hero.role": "Software Developer",
     "hero.intro": "I build responsive web projects and publish them online.",
     "hero.location": "Based in Yatta, Palestine",
@@ -86,7 +89,7 @@
     "achievements.demos": "Projects with live demos",
     "achievements.langs": "Languages on this site",
     "contact.title": "Contact",
-    "contact.intro": "Have a question or a project in mind? Send a message and it opens in your email app.",
+    "contact.intro": "Write below and your email app opens with the message ready. Nothing is sent until you press send there.",
     "form.name": "Name",
     "form.email": "Email",
     "form.message": "Message",
@@ -119,6 +122,9 @@
     "lang.label": "اللغة",
     "brand.name": "محمد نجار",
     "hero.name": "محمد نجار",
+    "hero.first": "محمد",
+    "hero.last": "نجار",
+    "contact.headline": "لديك سؤال أو فكرة مشروع؟",
     "hero.role": "مطوّر برمجيات",
     "hero.intro": "أبني مشاريع ويب متجاوبة وأنشرها على الإنترنت.",
     "hero.location": "أقيم في يطا، فلسطين",
@@ -187,7 +193,7 @@
     "achievements.demos": "مشاريع لها عروض مباشرة",
     "achievements.langs": "لغات في هذا الموقع",
     "contact.title": "التواصل",
-    "contact.intro": "لديك سؤال أو فكرة مشروع؟ أرسل رسالة وستُفتح في تطبيق البريد لديك.",
+    "contact.intro": "اكتب هنا وسيفتح تطبيق البريد لديك والرسالة جاهزة. لا يُرسل شيء حتى تضغط إرسال هناك.",
     "form.name": "الاسم",
     "form.email": "البريد الإلكتروني",
     "form.message": "الرسالة",
@@ -283,7 +289,7 @@
   // Project details modal
   const dlg = $('#modal');
   $$('.details').forEach(b => b.addEventListener('click', () => {
-    const c = b.closest('.card'), id = c.dataset.project;
+    const c = b.closest('.work'), id = c.dataset.project;
     $('#m-title').dataset.i18n = `projects.${id}.title`;
     $('#m-desc').dataset.i18n = `projects.${id}.details`;
     $('#m-status').dataset.i18n = c.dataset.status;
